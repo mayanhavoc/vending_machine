@@ -13,7 +13,7 @@ class FoodSearch extends Component {
     }
     handleClick(){
         alert("Saved your food to DB");
-        this.props.history.push("/");
+        this.props.history.push(`/food/${this.state.query}`);
     }
     render() {
         return (

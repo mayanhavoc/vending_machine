@@ -8,7 +8,7 @@ export class Food extends Component {
         const url = `https://source.unsplash.com/400x225/?${name}`;
         return (
             <div className="Food">
-                {/\d/.test(name) ? <Redirect to="/"/> : 
+                {/\d/.test(name) ? <Redirect to="/notfound"/> : 
                 <div>
                     <h1>I love to eat {name}</h1>
                     <img src={url} alt={name} />

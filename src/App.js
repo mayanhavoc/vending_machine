@@ -2,6 +2,7 @@ import { Component } from 'react';
 // import VendingMachine from './VendingMachine';
 import Food from './Food';
 import Meal from './Meal';
+import Navbar from './Navbar';
 import { Route, Switch } from 'react-router-dom';
 import FoodSearch from './FoodSearch';
 import './App.css';
@@ -10,8 +11,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Navbar />
         <Switch>
-          <Route exact path="/" component={FoodSearch} />
+          {/* <Route exact path="/" render={(routerProps) => <FoodSearch {...routerProps}/>} /> */}
+          <Route 
+          exact path="/"
+          component={FoodSearch} />
           <Route exact path="/food/:name" render={(props) => <Food {...props} />} />
           <Route
             exact
